@@ -16,23 +16,18 @@
       <h1>Заголовок</h1>
     </div>
 
-
+<div class="container-1">
+  <div class="container-2">
     <nav>
-
-      <a href="#">Ссылка меню 1</a>
-      <ul style="list-style-type:none;">
-        <li style="display: inline-block;"><a
-            href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fru.wikipedia.org%2Fwiki%2FFile%3A%25D0%259A%25D0%25BE%25D1%2582.jpg&psig=AOvVaw1zK2Vp7USm-Herch3LeGPt&ust=1758484991741000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCMiIqpyR6I8DFQAAAAAdAAAAABAE">кот</a>
-        </li>
-        <li style="display: inline-block;"><a href=""></a></li>
-        <li style="display: inline-block;"><a
-            href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fru.wikipedia.org%2Fwiki%2FFile%3A%25D0%259A%25D0%25BE%25D1%2582.jpg&psig=AOvVaw1zK2Vp7USm-Herch3LeGPt&ust=1758484991741000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCMiIqpyR6I8DFQAAAAAdAAAAABAE">кот</a>
-        </li>
-
-      </ul>
-    </nav>
+		<div class="navref"><a href="#links">Ссылки</a></div>
+		<div class="navref"><a href="#form">Форма</a></div>
+		<div class="navref"><a href="#table">Таблица</a></div>
+  </div>
+	</nav>
+</div>
   </header>
   <main>
+    <h2 id="links">Ссылки</h2>
     <ul>
       <!--1-->
       <li> <a href="https://www.kubsu.ru/index.php">Ссылка на заглавную страницу КубГУ</a></li>
@@ -99,7 +94,7 @@
       <li><a href="ftp://username:password@ftp.example.com/file.pdf">ссылку на файл на сервере FTP с авторизацией</a>
       </li>
 
-      <div>
+      <div style="display: flex;justify-content: center;padding: 0;">
         <table>
           <caption><h2 id="table">Таблица</h2></caption>
           <tr>
@@ -157,6 +152,7 @@
         </table>
     </ul>
     <form>
+      <caption><h2 id="form">Форма</h2></caption>
       <label>
         Введите ваше ФИО ниже:<br>
         <input required type="text" placeholder="Иванов Иван Иванович">

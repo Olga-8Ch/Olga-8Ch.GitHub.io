@@ -7,13 +7,33 @@ body {
   font-family: "Montserrat";
 }
 
-header,
+header
+{
+  background-color: #344e41;
+  display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+
+}
+.container-1 {
+            display: flex;
+            align-items: flex-start;
+            .container-2 {
+                display: flex;
+                justify-content: flex-end;
+                align-items: flex-start;
+            }
+        }
+
 footer {
   background-color: #344e41;
   text-align: center;
 
 
 }
+
+
 
 h1 {
   margin-top: 0;
@@ -36,12 +56,15 @@ tr:nth-child(2n+1) {
 
 .logo {
   float: left;
-  margin-left: 20px;
-  margin-top: 20px;
+  margin-left: 13px;
+  margin-top: 13px;
 }
 
 .footer__text {
   margin: 0;
   padding: 20px;
 }
-
+h2{
+  margin: 5px;
+text-align: center;
+}
