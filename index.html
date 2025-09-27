@@ -16,14 +16,15 @@
       <h1>Заголовок</h1>
     </div>
 
-<div class="container-1">
-  <div class="container-2">
-    <nav>
-		<div class="navref"><a href="#links">Ссылки</a></div>
-		<div class="navref"><a href="#form">Форма</a></div>
-		<div class="navref"><a href="#table">Таблица</a></div>
-  </div>
-	</nav>
+  <div id="container-1">
+    <div id="container-2" style="flex:1">
+      <nav>
+      <a href="#links">Ссылки</a>
+      <a href="#form">Форма</a>
+      <a href="#table">Таблица</a>
+    </nav>
+    </div>
+    <div style="flex:1"></div>
 </div>
   </header>
   <main>
@@ -93,7 +94,7 @@
       <!--21-->
       <li><a href="ftp://username:password@ftp.example.com/file.pdf">ссылку на файл на сервере FTP с авторизацией</a>
       </li>
-
+</ul>
       <div style="display: flex;justify-content: center;padding: 0;">
         <table>
           <caption><h2 id="table">Таблица</h2></caption>
@@ -150,7 +151,7 @@
             <td>106 тыс чел</td>
           </tr>
         </table>
-    </ul>
+      </div>
     <form>
       <caption><h2 id="form">Форма</h2></caption>
       <label>

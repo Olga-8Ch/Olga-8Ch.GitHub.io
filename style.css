@@ -12,17 +12,28 @@ header
   background-color: #344e41;
   display: flex;
         justify-content: space-between;
-        align-items: center;
+        align-items: stretch;
+        align-content: center;
+        gap: 0;
 
 
 }
-.container-1 {
+
+#container-1 {
             display: flex;
-            align-items: flex-start;
-            .container-2 {
+            flex-direction: column;
+            align-items: stretch;
+            justify-content: space-between;
+            align-content: stretch;
+            height: 100%;
+            gap: 0;
+            flex:1;
+            #container-2 {
+              margin-top: 18px;
                 display: flex;
-                justify-content: flex-end;
-                align-items: flex-start;
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: center;
             }
         }
 
@@ -38,6 +49,7 @@ footer {
 h1 {
   margin-top: 0;
   font-size: 58px;
+  margin-bottom: 0;
 }
 
 a {
@@ -56,8 +68,13 @@ tr:nth-child(2n+1) {
 
 .logo {
   float: left;
+  flex:1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
   margin-left: 13px;
-  margin-top: 13px;
+ margin-top: 13px;
+ margin-bottom: 13px;
 }
 
 .footer__text {
@@ -67,4 +84,10 @@ tr:nth-child(2n+1) {
 h2{
   margin: 5px;
 text-align: center;
+}
+.site-name{
+  flex:2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
