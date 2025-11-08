@@ -2,25 +2,63 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Калькулятор стоимости</title>
-</head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор стоимости напитков</title>
+    <link rel="stylesheet" href="style.css">
+<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=oGRhO87os_W_LoKvifz57LIi5otixR9P-1hqO_ChkSovyev_FWknQGihRnwxdzOZgbwsaDr41pHfoaDHgx4v6Q" charset="UTF-8"></script></head>
 <body>
-    <h1>Калькулятор стоимости заказа</h1>
+    <h1>Калькулятор стоимости напитков</h1>
 
-    <div id="result"></div>
+    <div class="calculator">
+        <form id="calculator-form">
+            <div class="form-group">
+                <label for="quantity">Количество:</label>
+                <input type="text" id="quantity" name="quantity" placeholder="Введите количество">
+                <div id="quantity-error" class="error hidden"></div>
+            </div>
 
-    <form>
-        <input name="quantity" type="text" placeholder="Количество">
+            <div class="form-group">
+                <label>Тип напитка:</label>
+                <div class="radio-group">
+                    <div class="radio-option">
+                        <input type="radio" id="type1" name="roll-type" value="classic" checked>
+                        <label for="type1">Какао (120 руб.)</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="type2" name="roll-type" value="special">
+                        <label for="type2">Капучино (200 руб.)</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="type3" name="roll-type" value="premium">
+                        <label for="type3">Латте (190 руб.)</label>
+                    </div>
+                </div>
+            </div>
 
-        <select name="product">
-            <option value="320">Филадельфия - 320 руб.</option>
-            <option value="280">Калифорния - 280 руб.</option>
-            <option value="350">Дракон - 350 руб.</option>
-        </select>
+            <div id="options-group" class="form-group hidden">
+                <label for="options">Дополнительные опции:</label>
+                <select id="options" name="options">
+                    <option value="0">Без дополнительных опций</option>
+                    <option value="0">С сахаром</option>
+                    <option value="10">С карамельным сиропом (+10 руб.)</option>
+                    <option value="10">С шоколадным сиропом (+10 руб.)</option>
+                    <option value="10">С ореховым сиропом (+10 руб.)</option>
+                    <option value="10">С лавандовым сиропом (+10 руб.)</option>
+                    <option value="10">С ванильным сиропом (+10 руб.)</option>
+                </select>
+            </div>
 
-        <button onclick="return calculate();">Рассчитать</button>
-    </form>
+            <div id="property-group" class="form-group hidden">
+                <div class="checkbox-option">
+                    <input type="checkbox" id="property" name="property" value="5">
+                    <label for="property">Добавить корицу (+5 руб.)</label>
+                </div>
+            </div>
+        </form>
 
+        <div id="result">Стоимость: 0 руб.</div>
+    </div>
     <script src="calculator.js" defer></script>
+
 </body>
 </html>
