@@ -3,62 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Калькулятор стоимости напитков</title>
+    <title>Галерея-слайдер</title>
     <link rel="stylesheet" href="style.css">
-<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=oGRhO87os_W_LoKvifz57LIi5otixR9P-1hqO_ChkSovyev_FWknQGihRnwxdzOZgbwsaDr41pHfoaDHgx4v6Q" charset="UTF-8"></script></head>
+
+<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=TrG0FP3Vl0PraW0EwBUPodTcN7GcOydDWjeFwT7CUhUcG7AjiykzHa-gmiLutpnW" charset="UTF-8"></script></head>
 <body>
-    <h1>Калькулятор стоимости напитков</h1>
+    <div class="gallery-container">
+        <h1 class="gallery-title">Галерея изображений</h1>
 
-    <div class="calculator">
-        <form id="calculator-form">
-            <div class="form-group">
-                <label for="quantity">Количество:</label>
-                <input type="text" id="quantity" name="quantity" placeholder="Введите количество">
-                <div id="quantity-error" class="error hidden"></div>
+        <div class="slider-container">
+            <div class="slider" id="slider">
             </div>
 
-            <div class="form-group">
-                <label>Тип напитка:</label>
-                <div class="radio-group">
-                    <div class="radio-option">
-                        <input type="radio" id="type1" name="roll-type" value="classic" checked>
-                        <label for="type1">Какао (120 руб.)</label>
-                    </div>
-                    <div class="radio-option">
-                        <input type="radio" id="type2" name="roll-type" value="special">
-                        <label for="type2">Капучино (200 руб.)</label>
-                    </div>
-                    <div class="radio-option">
-                        <input type="radio" id="type3" name="roll-type" value="premium">
-                        <label for="type3">Латте (190 руб.)</label>
-                    </div>
-                </div>
-            </div>
+            <button class="nav-btn prev-btn" id="prevBtn">&#10094;</button>
+            <button class="nav-btn next-btn" id="nextBtn">&#10095;</button>
+        </div>
 
-            <div id="options-group" class="form-group hidden">
-                <label for="options">Дополнительные опции:</label>
-                <select id="options" name="options">
-                    <option value="0">Без дополнительных опций</option>
-                    <option value="0">С сахаром</option>
-                    <option value="10">С карамельным сиропом (+10 руб.)</option>
-                    <option value="10">С шоколадным сиропом (+10 руб.)</option>
-                    <option value="10">С ореховым сиропом (+10 руб.)</option>
-                    <option value="10">С лавандовым сиропом (+10 руб.)</option>
-                    <option value="10">С ванильным сиропом (+10 руб.)</option>
-                </select>
+        <div class="pager">
+            <span id="currentPage">1</span>
+            <span>из</span>
+            <span id="totalPages">3</span>
+            <div class="pager-dots" id="pagerDots">
             </div>
+        </div>
 
-            <div id="property-group" class="form-group hidden">
-                <div class="checkbox-option">
-                    <input type="checkbox" id="property" name="property" value="5">
-                    <label for="property">Добавить корицу (+5 руб.)</label>
-                </div>
-            </div>
-        </form>
-
-        <div id="result">Стоимость: 0 руб.</div>
+        <div class="debug-info">
+            Всего изображений: <strong>7</strong> |
+            Отображается на странице: <strong id="slidesPerViewInfo">3</strong> |
+            Всего страниц: <strong id="totalPagesInfo">3</strong>
+        </div>
     </div>
-    <script src="calculator.js" defer></script>
-
+    <script src="carousel.js" defer></script>
 </body>
 </html>
