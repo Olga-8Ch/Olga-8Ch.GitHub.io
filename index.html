@@ -3,36 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Галерея-слайдер</title>
+    <title>Форма обратной связи</title>
     <link rel="stylesheet" href="style.css">
-
-<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=TrG0FP3Vl0PraW0EwBUPodTcN7GcOydDWjeFwT7CUhUcG7AjiykzHa-gmiLutpnW" charset="UTF-8"></script></head>
+<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=g6U0DzmNfMHXXwRJJfdm7iGh3SQDtM9PzfwqEFB1RfZsaANUi9F-Ifqilq_1wQyU" charset="UTF-8"></script></head>
 <body>
-    <div class="gallery-container">
-        <h1 class="gallery-title">Галерея изображений</h1>
-
-        <div class="slider-container">
-            <div class="slider" id="slider">
-            </div>
-
-            <button class="nav-btn prev-btn" id="prevBtn">&#10094;</button>
-            <button class="nav-btn next-btn" id="nextBtn">&#10095;</button>
+    <div class="container">
+        <div class="header">
+            <h1>Добро пожаловать на наш сайт</h1>
+            <p>Если у вас есть вопросы или предложения, свяжитесь с нами через форму обратной связи</p>
+            <button class="open-form-btn" id="openFormBtn">Связаться с нами</button>
         </div>
 
-        <div class="pager">
-            <span id="currentPage">1</span>
-            <span>из</span>
-            <span id="totalPages">3</span>
-            <div class="pager-dots" id="pagerDots">
-            </div>
-        </div>
-
-        <div class="debug-info">
-            Всего изображений: <strong>7</strong> |
-            Отображается на странице: <strong id="slidesPerViewInfo">3</strong> |
-            Всего страниц: <strong id="totalPagesInfo">3</strong>
+        <div style="max-width: 800px; margin: 0 auto;">
+            <h2>О нашей компании</h2>
+            <p>Мы занимаемся разработкой современных веб-решений для бизнеса. Наша команда состоит из опытных специалистов, готовых реализовать проекты любой сложности.</p>
+            <p>Свяжитесь с нами, чтобы обсудить ваш проект или получить консультацию по интересующим вас вопросам.</p>
         </div>
     </div>
-    <script src="carousel.js" defer></script>
+
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="feedback-form">
+            <div class="form-header">
+                <h2 class="form-title">Форма обратной связи</h2>
+                <button class="close-btn" id="closeFormBtn">&times;</button>
+            </div>
+
+            <form id="feedbackForm">
+                <div class="form-group">
+                    <label for="fullName">ФИО *</label>
+                    <input type="text" id="fullName" name="fullName" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Телефон</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+
+                <div class="form-group">
+                    <label for="organization">Организация</label>
+                    <input type="text" id="organization" name="organization">
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Сообщение *</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+
+                <div class="checkbox-group">
+                    <input type="checkbox" id="privacyPolicy" name="privacyPolicy" required>
+                    <label for="privacyPolicy">Я согласен с политикой обработки персональных данных *</label>
+                    </div>
+
+                <button type="submit" class="submit-btn" id="submitBtn">Отправить</button>
+
+                <div class="message success" id="successMessage">
+                    Сообщение успешно отправлено!
+                </div>
+
+                <div class="message error" id="errorMessage">
+                    Произошла ошибка при отправке сообщения. Пожалуйста, попробуйте позже.
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="form.js" defer></script>
 </body>
 </html>
