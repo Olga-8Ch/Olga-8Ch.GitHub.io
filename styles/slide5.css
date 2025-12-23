@@ -1,0 +1,83 @@
+.slide5{
+    color: var(--grey);
+    background-color: #fff;
+    padding-top: 60px;
+}
+.slide5 h2{
+    color: black;
+    margin-top: 0;
+}
+.slide5_title{
+    text-align: center;
+    margin-top: 50px;
+}
+.slide5_tarif{
+    border-radius: 5px;
+    border: 1px solid #e6e6e6;
+    margin: 0 auto 30px;
+    padding: 30px 15px;
+    max-width: 420px;
+    transition: all 500ms;
+}
+.slide5_tarif_title{
+    color: var(--orange);
+    font-size: 22px;
+    font-weight: bold;
+    border-bottom: 2px solid #e5e5e5;
+    margin-bottom: 50px;
+    padding-bottom: 25px;
+}
+.slide5_tarif_ref{
+    display: block;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 5px;
+    color: var(--orange);
+    border: 1px solid var(--orange);
+    text-align: center;
+    padding: 20px 10px;
+    font-size: 12px;
+    transition: all 300ms;
+    background-color: transparent;
+}
+.slide5_tarif_ref_reverse{
+    color: white;
+    background-color: var(--orange);
+}
+.tarif_services{
+    margin-bottom: 18px;
+    font-size: 14px;
+    color: #4e5972;
+    position: relative;
+    padding-left: 30px;
+}
+.tarif_services::before{
+    content: "";
+    width: 13px;
+    height: 10px;
+    background: url("../img/checkmark.svg") no-repeat center;
+    background-size: cover;
+    position: absolute;
+    left: 0;
+    margin-right: 15px;
+}
+.slide5_offer{
+    text-align: center;
+    font-size: 15px;
+    max-width: 475px;
+    margin: auto;
+}
+.slide5_ref{
+    text-align: center;
+    margin-top: 30px;
+    text-transform: uppercase;
+}
+.slide5_ref a{
+    transition: color 300ms;
+    color: black;
+    font-size: 13px;
+}
+.slide5_ref a:hover{
+    text-decoration: none;
+    color: var(--orange);
+}

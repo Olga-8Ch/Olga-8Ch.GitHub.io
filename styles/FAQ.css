@@ -1,0 +1,33 @@
+.FAQ h2{
+    text-align: center;
+}
+.questcontainer
+{
+    margin: 30px auto;
+}
+.question{
+    padding: 10px 15px;
+    outline: 3px solid transparent;
+    transition: 300ms outline-color;
+}
+.question_title{
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+    padding-left: 28px;
+
+}
+.question_number{
+    color: var(--grey);
+    float: left;
+    font-size: 14px;
+    font-weight: 600;
+    padding-top: 2px;
+    text-align: right;
+    width: 20px;
+    user-select: none;
+}
+.answer{
+    color: var(--grey);
+    padding: 10px 28px;
+}

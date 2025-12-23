@@ -1,76 +1,590 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Форма обратной связи</title>
-    <link rel="stylesheet" href="style.css">
-<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=g6U0DzmNfMHXXwRJJfdm7iGh3SQDtM9PzfwqEFB1RfZsaANUi9F-Ifqilq_1wQyU" charset="UTF-8"></script></head>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/shapka.css">
+    <link rel="stylesheet" href="styles/slide2-4.css">
+    <link rel="stylesheet" href="styles/slide5.css">
+    <link rel="stylesheet" href="styles/slide6-7.css">
+    <link rel="stylesheet" href="styles/slide8.css">
+	<link rel="stylesheet" href="styles/slide9.css">
+    <link rel="stylesheet" href="styles/slide11.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/FAQ.css">
+    <title>Базовый проект</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/script.js"></script>
+
+</head>
+
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>Добро пожаловать на наш сайт</h1>
-            <p>Если у вас есть вопросы или предложения, свяжитесь с нами через форму обратной связи</p>
-            <button class="open-form-btn" id="openFormBtn">Связаться с нами</button>
+    <!-- Проект выполнила студентка 22 группы Чернухина Ольга-->
+    <div class="tipa-heder">
+        <video autoplay="" loop="" class="video" playsinline preload="auto" muted>
+            <source src="img/video.mp4" type="video/mp4">
+        </video>
+        <div class="container">
+            <header class="header">
+                <div class="header__container">
+                    <img class="header__logo" img src="img/logo.jpg" alt="logo"
+                    style="height: 65px;">
+                    <div class="header__menu menu">
+                        <div class="menu__icon">
+                            <span></span>
+                        </div>
+                        <nav class="menu__body">
+                            <ul class="menu__list">
+                                <li>
+                                    <a href="#" class="menu__link">Поддержка Aeterna Domus</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="menu__link">Моделирования дизайна</a>
+                                    <span class="menu__arrow"></span>
+                                    <ul class="menu__sub-list admin">
+                                        <li>
+                                            <a href="#" class="menu__sub-link">Квартира</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="menu__sub-link">Дом</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="menu__sub-link">Коммерческое помещение</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="menu__sub-link">Ландшафт</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#" class="menu__link">Вакансии</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="menu__link">Мы</a>
+                                    <span class="menu__arrow"></span>
+                                    <ul class="menu__sub-list about">
+                                        <li>
+                                            <a href="#" class="menu__sub-link">Тарифы</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="menu__sub-link">Отзывы</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="menu__sub-link">Вопросы</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#" class="menu__link">Проекты</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="menu__link">Контакты</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <div class="container header_content">
+            <div class="title_wrapper">
+                <div class="text-title">
+                    <h1>Гармония формы, функции и чувства<br> Создаем интерьеры, в которых хочется жить</h1>
+                    <div class="head_description">Авторский дизайн жилых и коммерческих пространств<br> от концепции до реализации</div>
+                </div>
+                <a class="tarif_button" href="#tarif">
+                    ТАРИФЫ
+                </a>
+            </div>
+            <div class="description">
+                <div class="description_item">
+                    <div>
+                        <div class="first">#1 <img src="img/cup.png" alt="cup"></div>
+                        <span class="description_text">Среди конкурентов на рынке</span>
+                    </div>
+                </div>
+                <div class="description_item">
+                    <div>
+                        <span class="description_title">10+</span>
+                        <span class="description_text">опыт<br> в сфере разработки интерьера<br> более 10 лет</span>
+                    </div>
+                </div>
+                <div class="description_item">
+                    <div>
+                        <span class="description_title">30+</span>
+                        <span class="description_text">законченный международных<br> проектов</span>
+                    </div>
+                </div>
+                <div class="description_item">
+                    <div>
+                        <span class="description_title">115+</span>
+                        <span class="description_text">готовых интерьерных решений <br> по всей стране </span>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <div style="max-width: 800px; margin: 0 auto;">
-            <h2>О нашей компании</h2>
-            <p>Мы занимаемся разработкой современных веб-решений для бизнеса. Наша команда состоит из опытных специалистов, готовых реализовать проекты любой сложности.</p>
-            <p>Свяжитесь с нами, чтобы обсудить ваш проект или получить консультацию по интересующим вас вопросам.</p>
-        </div>
     </div>
-
-    <div class="modal-overlay" id="modalOverlay">
-        <div class="feedback-form">
-            <div class="form-header">
-                <h2 class="form-title">Форма обратной связи</h2>
-                <button class="close-btn" id="closeFormBtn">&times;</button>
+    <main>
+        <section class="slide2">
+            <div class="container">
+                <h2>Более 7 лет создаем интерьеры в России и за ее пределами!</h2>
+                <span><span style="color: rgb(79, 90, 115)">Для нас дизайн интерьера — это не только про эстетику и тренды<br>Это, в первую очередь, про людей</span></span>
+                <div class="slide2_grid">
+                    <div class="slide2_grid_item">
+                        <div class="slide2_item_body">
+                           1. Глубокий анализ:Анкетирование,<br>изучение стиля жизни
+                        </div>
+                    </div>
+                    <div class="slide2_grid_item">
+                        <div class="slide2_item_body">2. Планировочные решения: 2-3 варианта перепланировки с 3D-визуализацией</div>
+                    </div>
+                    <div class="slide2_grid_item">
+                        <div class="slide2_item_body">3. Подбор всех материалов и мебели: Составление спецификаций с ссылками и ценами
+                        </div>
+                    </div>
+                    <div class="slide2_grid_item">
+                        <div class="slide2_item_body">4. Дизайн коммерческих пространств
+                        </div>
+                    </div>
+                    <div class="slide2_grid_item">
+                        <div class="slide2_item_body">5. Авторский надзор: Регулярные выезды на объект, контроль за подрядчиками,
+                           решение вопросов на месте.
+                        </div>
+                    </div>
+                    <div class="slide2_grid_item">
+                        <div class="slide2_item_body">6. Декорирование готового интерьера
+                        </div>
+                    </div>
+                    <div class="slide2_grid_item">
+                        <div class="slide2_item_body">7. Проектирование веранд и зон отдыха
+                        </div>
+                    </div>
+                    <div class="slide2_grid_item">
+                        <div class="slide2_item_body">8. Огромный штат квалифицированных специалистов</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="slide3">
+            <div class="slide3_title">
+                <h2>О нас</h2>
             </div>
 
-            <form id="feedbackForm">
-                <div class="form-group">
-                    <label for="fullName">ФИО *</label>
-                    <input type="text" id="fullName" name="fullName" required>
+            <div class="slide3_flexbox container">
+                <div class="slide3_item" style="background-image: url(img/support1.svg);">
+                    <div class="slide3_item_number">01.</div>
+                    <h2>Составление проекта</h2>
+                    <div class="slide3_item_body">Онлайн или оффлайн формат встречи для начала работ</div>
                 </div>
-
-                <div class="form-group">
-                    <label for="email">Email *</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="phone">Телефон</label>
-                    <input type="tel" id="phone" name="phone">
-                </div>
-
-                <div class="form-group">
-                    <label for="organization">Организация</label>
-                    <input type="text" id="organization" name="organization">
-                </div>
-
-                <div class="form-group">
-                    <label for="message">Сообщение *</label>
-                    <textarea id="message" name="message" required></textarea>
-                </div>
-
-                <div class="checkbox-group">
-                    <input type="checkbox" id="privacyPolicy" name="privacyPolicy" required>
-                    <label for="privacyPolicy">Я согласен с политикой обработки персональных данных *</label>
+                <div class="slide3_item" style="background-image: url(img/support2.svg);">
+                    <div class="slide3_item_number">02.
                     </div>
-
-                <button type="submit" class="submit-btn" id="submitBtn">Отправить</button>
-
-                <div class="message success" id="successMessage">
-                    Сообщение успешно отправлено!
+                    <h2>Система Help – отчетность, прозрачность</h2>
+                    <div class="slide3_item_body">Возможность посмотреть ход всех работ.</div>
                 </div>
-
-                <div class="message error" id="errorMessage">
-                    Произошла ошибка при отправке сообщения. Пожалуйста, попробуйте позже.
+                <div class="slide3_item" style="background-image: url(img/support3.svg);">
+                    <div class="slide3_item_number">03.</div>
+                    <h2>Расширенная техническая поддержка</h2>
+                    <div class="slide3_item_body">Наши специалисты всегда проконсультируют вас по техническим моментам проекта</div>
                 </div>
-            </form>
-        </div>
-    </div>
-    <script src="form.js" defer></script>
+                <div class="slide3_item" style="background-image: url(img/support4.svg);">
+                    <div class="slide3_item_number">04.</div>
+                    <h2>Персональный менеджер проекта</h2>
+                    <div class="slide3_item_body">Ваш менеджер проекта всегда в курсе текущего состояния проекта и в
+                        любой момент готов ответить на любые вопросы.</div>
+                </div>
+                <div class="slide3_item" style="background-image: url(img/support5.svg);">
+                    <div class="slide3_item_number">05.</div>
+                    <h2>Удобные способы оплаты</h2>
+                    <div class="slide3_item_body">Безналичный расчет или наличными после завершения проекта.</div>
+                </div>
+                <div class="slide3_item" style="background-image: url(img/support6.svg); ">
+                    <div class="slide3_item_number">06.</div>
+                    <h2>Работаем с предоплатой</h2>
+                    <div class="slide3_item_body">В рамках договора предоплата составляет 15% стоимости работ.</div>
+                </div>
+                <div class="slide3_item" style="background-image: url(img/support7.svg); ">
+                    <div class="slide3_item_number">07.</div>
+                    <h2>Штатные специалисты</h2>
+                    <div class="slide3_item_body">Надежная ремонтная бригада, высококвалифицированный специалисты. </div>
+                </div>
+                <div class="slide3_item" style="background-image: url(img/support8.svg); ">
+                    <div class="slide3_item_number">08.</div>
+                    <h2>Удобные каналы связи</h2>
+                    <div class="slide3_item_body">Консультации по телефону, в мессенджерах.</div>
+                </div>
+            </div>
+        </section>
+        <section class="slide4">
+            <div class="slide4_container">
+                <h2>Дизайн, который работает на ваш бизнес</h2>
+                <div class="slide4_flexbox">
+                    <div class="slide4_item">Разработка уникальной концепции, отражающей философию заведения.
+                    </div>
+                    <div class="slide4_item">Дизайн общественных зон: лобби, ресепшен, зона ожидания.</div>
+                    <div class="slide4_item">Эффективное проектирование торговых залов, примерочных, зоны касс, витрин.</div>
+                    <div class="slide4_item">Проектирование СПА-зон, фитнес-центров, конференц-залов.</div>
+                </div>
+            </div>
+            <img src="img/laptop.png" alt="laptop" class="slide4_laptop"
+            style="padding-top: 150px;
+                   padding-right: 150px;
+                  padding-bottom: 40px;">
+        </section>
+        <section class="slide5" id="tarif">
+            <div class="slide5_title">
+                <h2>Тарифы</h2>
+            </div>
+            <div class="slide5_flexbox container">
+                <div class="slide5_tarif start">
+                    <div class="slide5_tarif_title">Стартовый</div>
+                    <div class="slide5_tarif_body">
+                        <div class="tarif_services">Погружение и анализ:<br> Анкетирование, <br> 1-2 встречи, выезд на замеры</div>
+                        <div class="tarif_services">Разработка 1 варианта планировки<br> с расстановкой мебели</div>
+                        <div class="tarif_services">3D-визуализация 2-х ключевых помещений
+                        </div>
+                        <div class="tarif_services">Рабочая документация (комплект чертежей)+все сметы</div>
+                         <div class="tarif_services">Подбор материалов</div>
+                    </div>
+                    <a href="#form" class="slide5_tarif_ref">
+                        СВЯЖИТЕСЬ С НАМИ!
+                    </a>
+                </div>
+                <div class="slide5_tarif">
+                    <div class="slide5_tarif_title">Повышенный</div>
+                    <div class="slide5_tarif_body">
+                        <div class="tarif_services">Подбор и спецификация крупной встраиваемой и корпусной мебели</div>
+                        <div class="tarif_services">2 варианта планировочного решения на выбор</div>
+                        <div class="tarif_services">3D-визуализация всех помещений в проекте</div>
+                        <div class="tarif_services">Все чертежи из «Стандарта»+детальные схемы сложных узлов</div>
+                        <div class="tarif_services">Комплексный подбор материалов и оборудования</div>
+                    </div>
+                    <a href="#form" class="slide5_tarif_ref slide5_tarif_ref_reverse">
+                        СВЯЖИТЕСЬ С НАМИ!
+                    </a>
+                </div>
+                <div class="slide5_tarif">
+                    <div class="slide5_tarif_title">Премиум</div>
+                    <div class="slide5_tarif_body">
+                        <div class="tarif_services">Ведение фото- и видеоотчетов для клиента в закрытом чате</div>
+                        <div class="tarif_services">Предоставление 2-3 полноценных концепций на выбор, включая эскизы ручной подачи</div>
+                        <div class="tarif_services">Фотореалистичные 3D-визуализации + VR-тур</div>
+                       <div class="tarif_services">Полный альбом технических чертежей</div>
+                       <div class="tarif_services">Полный подбор и закупка всей мебели, светильников, картин, украшений </div>
+                    </div>
+                    <a href="#form" class="slide5_tarif_ref">
+                        СВЯЖИТЕСЬ С НАМИ!
+                    </a>
+                </div>
+            </div>
+            <div class="slide5_offer">Вам не подходят наши тарифы? Оставьте заявку и мы предложим вам индивидуальные
+                условия!</div>
+            <div class="slide5_ref"><a href="#form">Получить индивидуальный тариф</a></div>
+        </section>
+        <section class="slide6">
+            <div class="container">
+                <h2>Наши специалисты и выполняют проекты любой сложности</h2>
+                <div class="slide6_flexbox">
+                    <div class="slide6_item"><img src="img/competency-20.png" alt="competency-20">
+                        <div class="slide6_item_title">от 6 недель</div>
+                        <div class="slide6_item_body">дизайн-проект квартиры</div>
+                    </div>
+                    <div class="slide6_item"><img src="img/competency-21.png" alt="competency-21">
+                        <div class="slide6_item_title">от 4 месяцев</div>
+                        <div class="slide6_item_body">дизайн-проект коттеджа</div>
+                    </div>
+                    <div class="slide6_item"><img src="img/competency-22.png" alt="competency-22">
+                        <div class="slide6_item_title">от 3 месяцев</div>
+                        <div class="slide6_item_body">дизайн-проект объектов</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="slide8">
+            <h2>Последние проекты</h2>
+            <div class="slide8_grid container">
+                <div class="slide8_item">
+                    <a href="#">
+                        <div class="slide8_item_image" style='background-image: url("img/case1.jpg");'></div>
+                        <div class="slide8_item_title">Лофт для IT-предпринимателя</div>
+                        <div class="slide8_item_date">08.07.2025</div>
+                        <div class="slide8_item_content">Мы разработали концепцию «Мягкий индастриал». Основа — честные материалы: очищенная кирпичная кладка, шлифованный бетон...</div>
+                    </a>
+                </div>
+                <div class="slide8_item slide8_item_type1">
+                    <a href="#">
+                        <div class="slide8_item_image max-height" style='background-image: url("img/case2.jpg");'>
+                            <div class="slide8_item_imgtext"><span style="color:red">Загородный дом у озера</span></div>
+                        </div>
+                    </a>
+                </div>
+                <div class="slide8_item">
+                    <a href="#">
+                        <div class="slide8_item_image max-height" style='background-image: url("img/case3.jpg");'>
+                            <div class="slide8_item_imgtext"><span style="color:red">Салон красоты в Казани. Минимализм с характером</span></div>
+                        </div>
+                    </a>
+                </div>
+                <div class="slide8_item slide8_item_type2">
+                    <a href="#">
+                        <div class="slide8_item_image max-height" style='background-image: url("img/case4.jpg");'>
+                            <div class="slide8_item_imgtext">Цветочный магазин в Москве</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="slide8_item">
+                    <a href="#">
+                        <div class="slide8_item_image" style='background-image: url("img/case5.png");'></div>
+                        <div class="slide8_item_title">Квартира для семьи с детьми</div>
+                        <div class="slide8_item_date">14.05.2025</div>
+                        <div class="slide8_item_content">Концепция получила название «Светлый семейный коворкинг». Основная идея — создать лёгкое, воздушное пространство, где...</div>
+                    </a>
+                </div>
+            </div>
+        </section>
+      <section class="slide9">
+			<h2>Отзывы</h2>
+			<div class="slide9__container container">
+				<div class="slide9__flexbox">
+					<div class="slide9__slider">
+						<div class="slider">
+							<div class="slider__item">
+								<div class="slider__text">
+									<p class="slider__mainText">«Мы купили свою первую квартиру — крошечную студию, и были в панике: как тут всё разместить? Обратились в Aeterna Domus с вопросом «можно ли вообще что-то сделать». Результат превзошел все ожидания! Нам не просто «впихнули» мебель — нам создали умное пространство. Появилась и полноценная спальня за раздвижной панелью, и рабочий кабинет, и даже обеденная зона на четверых! Спасибо за то, что наш маленький метр стал нашим большим и очень стильным домом. Рекомендуем всем, кто думает, что 40 метров — это мало.»</p>
+									<p class="slider__otherText">С уважением,Анна и Максим, Москва</p>
+								</div>
+							</div>
+							<div class="slider__item">
+								<div class="slider__text">
+									<p class="slider__mainText">«Главным требованием было создать пространство, где будет комфортно и взрослым, и детям, и чтобы игрушки не захватывали всю территорию. Команда Aeterna Domus предложила гениальное решение с трансформирующейся детской и системой хранения «на вырост». Мы получили не просто красивый интерьер в стиле soft modern, а продуманную до мелочей среду для жизни. Дети в восторге от своих «домиков», а мы наконец-то можем спокойно выпить кофе в гостиной. Это была лучшая инвестиция в наш семейный комфорт.»
+									</p>
+									<p class="slider__otherText">Семья Соколовых, Санкт-Петербург</p>
+								</div>
+							</div>
+							<div class="slider__item">
+								<div class="slider__text">
+									<p class="slider__mainText">«Задача стояла сложная: создать не просто красивое, а «продающее» пространство, где клиентки чувствуют себя особенными и расслабленными. Мы сотрудничали с Aeterna Domus по коммерческому тарифу. Они не только разработали шикарный дизайн в пастельных тонах, но и блестяще справились с технической частью: эргономика рабочих мест, разводка коммуникаций к каждому креслу. После редизайна количество положительных отзывов в соцсетях выросло в разы, а клиенты отмечают новую атмосферу. Бизнес пошел вверх!»</p>
+									<p class="slider__otherText">Екатерина, владелица салона красоты «Verona», Казань</p>
+								</div>
+							</div>
+							<div class="slider__item">
+								<div class="slider__text">
+									<p class="slider__mainText">«Мой ресурс — время. Я искал не дизайнера, а надежного партнера, который возьмет на себя весь процесс: от эскиза до заноса последнего декоративного камня в камин. Выбрал тариф «Профи» в Aeterna Domus. Это был идеальный выбор. Меня ставили в известность только по ключевым решениям, все остальное — подрядчики, закупки, контроль — легло на их плечи. Я продолжал работать, а мой загородный дом преображался. Приехал на «сдачу» проекта и получил ключи от идеального, полностью готового к жизни пространства. Ни одной потраченной нервной клетки. Бесценно.»</p>
+									<p class="slider__otherText">Дмитрий, основатель IT-стартапа, Москва</p>
+								</div>
+							</div>
+							<div class="slider__item">
+								<div class="slider__text">
+									<p class="slider__mainText">«Жила в «хрущевке» с типовым ремонтом 20-летней давности. Думала, что здесь уже ничего не придумаешь. Оказалось, можно! Специалисты Aeterna Domus деликатно расспросили о моих привычках, показали, как можно перекроить пространство, убрав темный коридор. Теперь у меня светлая квартира в скандинавском стиле с элементами классики. Всё функционально и красиво. Особенно радует кухня-гостиная, где я теперь принимаю гостей. Не думала, что в моем возрасте буду так влюблена в свой дом!»</p>
+									<p class="slider__otherText">Ольга, Екатеринбург</p>
+								</div>
+							</div>
+							<div class="slider__item">
+								<div class="slider__text">
+									<p class="slider__mainText">«Нужно было подготовить к сдаче апартаменты премиум-класса. Цель — получить максимальный доход от аренды. Aeterna Domus предложили не просто дизайн, а стратегию. Они выбрали прочные, но эффектные материалы, нейтральную цветовую гамму с яркими акцентами и спланировали пространство так, чтобы оно выглядело просторнее. Квартиру сдали в первые же две недели после ремонта по цене выше рыночной. Отличный ROI. Буду обращаться для отделки следующих объектов.»</p>
+									<p class="slider__otherText">Александр, инвестор в недвижимость, Сочи</p>
+								</div>
+							</div>
+							<div class="slider__item">
+								<div class="slider__text">
+									<p class="slider__mainText">«Мы хотели сохранить дух промышленного пространства, но сделать его уютным и пригодным для жизни. Многие дизайнеры пытались «смягчить» наш запрос. В Aeterna Domus нас услышали. Они виртуозно обыграли кирпич, бетон и коммуникации, добавили теплого дерева, удивительного света и классной винтажной мебели. Получился именно тот брутальный, но невероятно домашний лофт, о котором мы мечтали. Работали с ними в удовольствие, много нестандартных решений принималось прямо «в поле».»
+									</p>
+									<p class="slider__otherText">Артем и Кристина, Москва</p>
+								</div>
+							</div>
+							<div class="slider__item">
+								<div class="slider__text">
+									<p class="slider__mainText">«Решилась на онлайн-консультацию с [Название компании], так как живу в другом городе. Не верила, что это может сработать. Отправила план, фото и свои «хотелки». Через неделю получила полноценную концепцию, 3D и подробнейшую подборку мебели со ссылками! Сделала ремонт по этим материалам с местным прорабом. Это магия! Теперь у меня квартира мечты, хотя дизайнера я вживую ни разу не видела. Всем советую этот формат!»</p>
+									<p class="slider__otherText">Мария, Владивосток</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<nav class="slide9__nav">
+						<div class="slide__number">
+							<span class="slide__current"></span>
+							<span class="slide__slash">/</span>
+							<span class="slide__length"></span>
+						</div>
+					</nav>
+				</div>
+			</div>
+		</section>
+        <!-- <section class="slide10">
+            <h2>C нами работают</h2>
+        </section> -->
+        <section class="FAQ">
+            <h2>FAQ</h2>
+            <div class="questcontainer container">
+                <div class="question">
+                    <span class="question_number">1.</span>
+                    <div class="question_title">
+                        С чего начинается наша работа?
+                    </div>
+                    <div class="answer" hidden>
+                        Работа начинается с первой (часто бесплатной) 20-минутной онлайн-консультации. Мы знакомимся, я узнаю о вашем проекте, задачах и бюджете. Если мы понимаем, что подходим друг другу, следующий шаг — заключение договора и выезд на объект для детальных замеров и погружения в контекст.
+                    </div>
+                </div>
+                <div class="question">
+                    <span class="question_number">2.</span>
+                    <div class="question_title">
+                       Как формируется стоимость дизайн-проекта?
+                    </div>
+                    <div class="answer" hidden>
+                       Стоимость рассчитывается индивидуально и зависит от трех главных факторов: площади объекта, выбранного пакета услуг (например, «Концепция» или «Под ключ») и сложности работ (перепланировка, сложный свет, индивидуальная мебель). После знакомства я подготовлю для вас прозрачное коммерческое предложение с четким перечнем работ и итоговой ценой.
+                    </div>
+                </div>
+                <div class="question">
+                    <span class="question_number">3.</span>
+                    <div class="question_title">
+                        3. Вы работаете только в Москве?
+                    </div>
+                    <div class="answer" hidden>
+                        Мы находимся в Москве, но активно работаем с проектами по всей России и даже за рубежом. Для удаленных клиентов идеально подходит формат E-Design (виртуальный дизайн), а также этапы концепции и визуализации. Для авторского надзора на объектах в других городах возможны выезды по согласованному графику.
+                    </div>
+                </div>
+                <div class="question">
+                    <span class="question_number">4.</span>
+                    <div class="question_title">
+                         Что такое «авторский надзор» и он действительно необходим?
+                    </div>
+                    <div class="answer" hidden>
+                        Авторский надзор — это моя профессиональная поддержка на стройплощадке. Я регулярно приезжаю и контролирую, чтобы ремонт шел строго по нашим чертежам, проверяю качество работ и материалы. Он нужен вам, чтобы: избежать дорогостоящих ошибок строителей, сэкономить свое время на ежедневном контроле и быть уверенным, что в итоге получите именно тот результат, который видели на 3D-визуализациях.
+                    </div>
+                </div>
+                <div class="question">
+                    <span class="question_number">5.</span>
+                    <div class="question_title">
+                        Что именно я получу в результате?
+                    </div>
+                    <div class="answer" hidden>
+                        По окончании проектирования вы получите полный пакет документов для реализации. В зависимости от тарифа, в него входит:
+                        Планировочные решения и концепция в виде коллажей.
+                        Фотореалистичные 3D-визуализации, чтобы вы «погуляли» по будущему интерьеру.
+                        Технические чертежи для строителей (планы стен, потолков, электрики).
+                        Подробные списки с ссылками на все подобранные материалы, мебель и декор.
+                        В услуге «Под ключ» — полностью готовый к жизни интерьер.
+                    </div>
+                </div>
+                <div class="question">
+                    <span class="question_number">6.</span>
+                    <div class="question_title">
+                        А если концепция мне не понравится?
+                    </div>
+                    <div class="answer" hidden>
+                        На этапе разработки концепции у вас будет несколько итераций на правки. Мы будем двигаться от общего к частному: сначала утвердим планировку, затем цветовую гамму и стиль. Вы будете вовлечены в процесс и утвердите каждый шаг. Моя цель — создать интерьер, в котором вы узнаете себя и который будет вызывать у вас только чувство «Это именно то, что я хотел(а)!».
+                    </div>
+                </div>
+                <div class="question">
+                    <span class="question_number">7.</span>
+                    <div class="question_title">
+                        Вы помогаете с закупками?
+                    </div>
+                    <div class="answer" hidden>
+                        Да, конечно. В пакетах «Повышенный» и «Профи» я полностью занимаюсь комплектацией. Для вас я подготовлю понятные таблицы со ссылками, артикулами и ценами. При желании могу взять на себя общение с поставщиками, заказ, отслеживание доставки и проверку товаров. Это сэкономит вам десятки часов и убережет от ошибок при покупке.
+                    </div>
+                </div>
+                <div class="question">
+                    <span class="question_number">8.</span>
+                    <div class="question_title">
+                        У меня есть любимый диван/картина/ковер. Мы сможем их оставить?
+                    </div>
+                    <div class="answer" hidden>
+                        Конечно! Ваши любимые вещи — лучшая основа для создания персонализированного интерьера. Покажите их мне на одной из первых встреч (можно фото). Я внимательно изучу их стиль, цвет и размеры и грамотно впишу в новую концепцию, чтобы они обрели достойное окружение и заиграли по-новому.
+                    </div>
+                </div>
+                <div class="question">
+                    <span class="question_number">9.</span>
+                    <div class="question_title">
+                        Сколько времени займет весь процесс?
+                    </div>
+                    <div class="answer" hidden>
+                        Сроки зависят от масштаба:
+                        Дизайн-проект квартиры (до 100 м²): 1.5–3 месяца.
+                        Проект частного дома (200-300 м²): 3–6 месяцев.
+                        Реализация ремонта (с отделкой): от 6 месяцев.
+                    </div>
+                </div>
+                <div class="question">
+                    <span class="question_number">10.</span>
+                    <div class="question_title">
+                        У вас есть свои проверенные строители?
+                    </div>
+                    <div class="answer" hidden>
+                       За годы работы у меня сложился пул надежных подрядчиков, мастеров и поставщиков, с которыми я сотрудничаю на постоянной основе. Я с удовольствием порекомендую вам несколько проверенных команд, но окончательный выбор всегда останется за вами.
+                    </div>
+                </div>
+                <div class="question">
+                    <span class="question_number">11.</span>
+                    <div class="question_title">
+                       Что, если во время ремонта я захочу что-то изменить?
+                    </div>
+                    <div class="answer" hidden>
+                        Небольшие корректировки в процессе — это нормально. Главное, обсуждать их со мной своевременно, до начала конкретных работ. В рамках авторского надзора мы оперативно внесем изменения в чертежи и списки, чтобы это не повлияло на общий срок и бюджет, или найдем альтернативное решение на месте.
+                    </div>
+                </div>
+                <div class="question">
+                    <span class="question_number">12.</span>
+                    <div class="question_title">
+                        Зачем мне дизайнер, если есть Pinterest и строители?
+                    </div>
+                    <div class="answer" hidden>
+                        Потому что вы платите за результат, а не за процесс.
+                        Гарантию результата — что финал будет точно соответствовать 3D-визуализации.
+                        Экономию бюджета — профессиональное планирование исключает дорогие ошибки и переделки.
+                        Сохранение времени и нервов — я решаю тысячи технических вопросов, которые в самостоятельном ремонте ложатся на вас.
+                        Инвестицию — продуманный дизайн повышает стоимость недвижимости.
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="slide11">
+            <div class="slide11_container container">
+                <div class="slide11_description">
+                    <h2 id="form">Оставить заявку на<br> дизайн-проект</h2>
+                    <div class="slide11_text">Срочно нужен дизайн-проект? Вы хотите создать квартиру мечты
+                        или красиво организовать коммерческое помещение? Тогда вам точно к нам! Просто оставьте заявку и
+                        наш
+                        менеджер с вами свяжется!</div>
+                    <a href="tel:+79615227006" class="telephone_ref">8 961 522-70-06</a>
+                    <a href="mailto:info@aeterna_domus.ru" class="mail_ref">info@aeterna_domus.ru</a>
+                </div>
+                <div class="slide11_form">
+                    <form class="ajaxForm" action="https://formcarry.com/s/DxJREqfxWdg" accept-charset="UTF-8"
+                        id="myform">
+                        <input type="text" name="name" placeholder="Ваше имя" class="form_field" required>
+                        <input type="tel" name="tel" placeholder="Телефон" class="form_field" required>
+                        <input type="email" name="email" placeholder="E-mail" class="form_field" required>
+                        <textarea name="message" placeholder="Ваш комментарий" class="form_area"></textarea>
+                        <label>
+                            <input type="checkbox" name="agree" id="agree_checkbox" required>
+                            <!-- TODO: сделать чтобы ругался что не нажат чекбокс -->
+                            <span class="custom_checkbox">✓</span>
+                            <span class="after_checkbox">Отправляя заявку, я даю
+                                согласие на <span style="color: red;">обработку своих персональных
+                                    данных.*</span></span>
+                        </label>
+                        <button type="submit" class="submit_button">СВЯЖИТЕСЬ С НАМИ</button>
+                    </form>
+                </div>
+            </div>
+            <div class="line"></div>
+            <div class="footer container">
+                <div class="net_ref">
+                    <a href="#"><img src="img/facebook.svg" alt="facebook icon"></a>
+                    <a href="#"><img src="img/vk.svg" alt="vk icon"></a>
+                    <a href="#"><img src="img/telegram.svg" alt="telegram icon"></a>
+                    <a href="#"><img src="img/youtube.svg" alt="youtube icon"></a>
+                </div>
+                ООО «Aeterna Domus», Москва, Россия.<br>Aeterna Domus является зарегистрированной торговой маркой в России.
+            </div>
+
+        </section>
+    </main>
 </body>
+
 </html>
